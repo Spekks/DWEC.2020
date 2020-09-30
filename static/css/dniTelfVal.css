@@ -1,0 +1,22 @@
+.fondo-registro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.form-registro {
+    position: absolute;
+    display: block;
+    top: 5%;
+    left: 30%;
+    right: 30%;
+    background-color: aquamarine;
+    border-radius: 5px;
+    text-align: center;
+    font-size: medium;
+    overflow-y: auto;
+}
+
+.registro-botones {
+
+}

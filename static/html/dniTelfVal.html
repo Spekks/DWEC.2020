@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador DNI y Teléfono</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/dniTelfVal.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/dniTelf.Val.js"></script>
+</head>
+<body>
+    <div class="fondo-registro">
+        <div class="form-registro">
+            <form id="registro-botones">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" autofocus/></br>
+                <label for="telefono">TELÉFONO:</label>
+                <input type="text" id="telefono" REQUIRED_PATTERN="\d{9}"/></br>
+                <input type="submit" value="VALIDAR">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let dni = document.getElementById('dni');
+
+        $('registro-botones').on('submit', function(event) {
+            event.preventDefault();
+            if (isNaN(dni)) {
+                console.log("Nada de número");
+            } else {
+                console.log("Número");
+            }
+            this.reset();
+        });
+    </script>
+</body>
+</html>
